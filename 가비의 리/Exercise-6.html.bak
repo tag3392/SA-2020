@@ -37,42 +37,30 @@
           <nav class="gnb">
             <label for="toggle">
                 <i class="fa fa-times"></i></label>
-         <div class="menu">    
+        <div class="menu">    
         <h3>CONTENTS</h3>
              <ul>
-              <li><a href="./Exercise-1.html" title="">생활속의 통계1(비밀번호)</a></li>
-              <li><a href="./Exercise-2.html" title="">생활속의 통계2(감염자)</a></li>
-           <li><a href="./Exercise-3.html" title="">시어핀스키 삼각형과 확률3</a></li>
-           <li><a href="./Exercise-4.html" title="">수의 체계</a></li>
-           <li><a href="./Exercise-5.html" title="">항등원 역원</a></li>
-           <li><a href="./가비의 리/Exercise-6.html" title="">가비의 리</a></li>
-           <li><a href="./Exercise-7.html" title="">코딩으로 그림그리기</a></li>
-           <li><a href="./Exercise-8.html" title="">맨홀 뚜껑은 왜 둥글까?</a></li>
-           <li><a href="./Exercise-9.html" title="">산술기하평균</a></li>
-           <li><a href="./Exercise-10.html" title="">한붓그리기</a></li>
-              <li><a href="./Exercise-11.html" title="">최소 신장 트리</a></li>
-           <li><a href="./Exercise-12.html" title="">네트워크 이론</a></li>
+              <li><a href="./Exercise-8.html" title="">Exercise-8</a></li>
+              <li><a href="./Exercise-17.html" title="">Exercise-17</a></li>
              </ul>
             </div>
         </nav>
         
-    <p id="subject">대수 - 가비의 리</p> 
+    <p id="subject">과목명 - 수학</p> 
     </div>
     
     <div id="cont">
-    <div id="label01"><div class="button">대수</div><div id="unit">가비의 리<b>(고등학교)</b></div></div>  
+    <div id="label01"><div class="button">1. 기하</div><div id="unit">도형의 방정식 - 원의 방정식<b>(고등학교)</b></div></div>  
     
 <div id="toggle01">
 <table>
 <tr>
 	<td class="box">
-        <b>※ 가비의 리</b>
+        <b>※ 원의 방정식</b>
 	<br><br>
-        가비의 리는 같은 값을 갖는 비들의 분자의 합과 분모의 합의 비도 같은 비를 갖는다는 정리이다. 
+        [10수학02-06] 원의 방정식을 구할 수 있다.
 	<br><br>
-        가비의 리는 매개 변수 k를 같은 값은 값을 갖는 비로 두어 쉽게 증명할 수 있다. 
-	<br><br>
-		가비의 리를 기울기라는 개념으로 시각화 하면 다음 과 같이 시각화 하여 나타낼 수 있다.
+        [10수학02-07] 좌표평면에서 원과 직선의 위치 관계를 이해한다.
 	</td>
 </tr>
 </table>
@@ -82,7 +70,7 @@
       
     <div class="exbox">
         
-    <img src="./가비의 리/가비의 리 시각화.jpg" width="35">이고 반지름의 길이가 <img src="./Exercise-8/r.jpg" width="12">인 원의 방정식의 수식은 다음과 같다.
+    원의 중심이 <img src="./Exercise-8/(a,b).jpg" width="35">이고 반지름의 길이가 <img src="./Exercise-8/r.jpg" width="12">인 원의 방정식의 수식은 다음과 같다.
     
     <br><br>
     
