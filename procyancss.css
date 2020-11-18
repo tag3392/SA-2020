@@ -1,0 +1,296 @@
+*{margin:0; padding:0;}
+
+
+@media screen and (max-width:500px) {
+    h2{
+        padding:30px 0px;
+        text-align:center;
+        color:#626262;
+        font-size:1.2em;
+        }
+    
+    #bar{margin:75px 15px;
+        position:absolute;
+        }
+    }
+
+@media screen and (min-width:500.02px) {
+    h2{
+        padding:30px 0px;
+        text-align:center;
+        color:#626262;
+        font-size:1.6em;
+        }
+    
+    #bar{margin:32px;
+        position:absolute;
+        }
+    }
+    
+body{ -ms-overflow-style: none; }::-webkit-scrollbar { display: none; }
+    p{
+        margin-left:20px;
+        }
+
+    #header{
+        position:fixed;
+        background-color:#fff;
+        height:120px;
+        width:100%;
+        border-bottom:2px solid #ddd;
+        z-index:100; 
+        top:0px;
+        }
+
+    h2{
+        padding:30px 0px;
+        text-align:center;
+        color:#626262;
+        }
+
+    h2 a:link {text-decoration: none; color: #626262;}   
+    h2 a:visited {text-decoration: none; color: #626262;}  
+    h2 a:hover {text-decoration: none; color: #626262;}    
+
+
+    #cont{
+        margin-top:120px; 
+        }
+
+    #subject{
+        margin-right:10px;
+        text-align:right;
+        }
+
+    #label01{
+        display:block;
+        padding:20px 0px;
+        height:20px;
+        cursor:pointer;
+        background:#B5B2FF;
+        background:linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);
+        background:-ms-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*익스플로러*/
+        background:-webkit-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*구글, 사파리*/
+        background:-o-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*오페라*/
+        background:-moz-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*파이어폭스*/
+        border-bottom:2px solid #fff;
+        }
+
+    #label01:hover{
+        background:#f0efff;
+        cursor:pointer;
+        }
+
+    #unit{
+        display:inline;
+        }
+
+    #unit:hover{
+        text-decoration:underline;
+        }
+
+    #toggle01{
+        background:#F6F6F6;
+        margin:10px;
+        padding:30px 20px; 
+        }
+
+    .box{
+        background:#FFF;
+        padding:20px;
+        border-radius:8px;
+        box-shadow: 2px 3px 10px #bbb;
+        font-size:14pt;
+        }
+
+    .exbox{
+        background-color:#fff;
+        border:10px solid #e3e3ee;
+        height:200px;
+        margin:10px;
+        padding:10px;
+    }
+
+
+    #video{
+        display:inline-block;
+        margin-bottom:10px;
+        padding:5px 10px;
+        border:2px solid #ddd;
+        background:#fff;
+        border-radius:10px;
+    }
+
+    #video:hover{
+        background:#d9d6ff;
+        cursor:pointer;
+        font-weight:bold;
+        }
+
+
+    iframe{
+        width:100%;
+        max-width:600px;
+        height:100%;
+    }
+    
+    #toggle01-1{
+        height:340px;
+        display:none;
+    }
+
+    #label02{
+        display:block;       
+        padding:20px 0px;
+        height:20px;
+        cursor:pointer;
+        background:linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);
+        background:-ms-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*익스플로러*/
+        background:-webkit-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*구글, 사파리*/
+        background:-o-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*오페라*/
+        background:-moz-linear-gradient(#B5B2FF,#CDCBFF,#B5B2FF);/*파이어폭스*/ 
+        }
+
+    #label02:hover{
+        background:#f0efff;
+        cursor:pointer;
+        }
+
+    #toggle02{
+        display:none;
+        background:#F6F6F6;
+        margin:10px;
+        padding:30px 20px; 
+        }
+        
+
+    .button{
+        display:inline;
+        border:1px solid #bbb;
+        border-radius:5px;
+        margin-left:10px;
+        margin-right:10px;
+        padding:5px 10px 5px 10px;
+        font-size:12pt;
+        text-decoration:none;
+        background:linear-gradient(#fff,#ccc);
+        background:-ms-linear-gradient(#fff,#ccc);/*익스플로러*/
+        background:-webkit-linear-gradient(#fff,#ccc);/*구글, 사파리*/
+        background:-o-linear-gradient(#fff,#ccc);/*오페라*/
+        background:-moz-linear-gradient(#fff,#ccc);/*파이어폭스*/
+        }
+
+    .scroll{
+        display:none;
+        }
+
+     .top{
+        font-size:12px;
+        position:fixed;
+        right:50px;bottom:50px;
+        font-size:30px;
+        padding:10px 15px;
+        background:rgba(0,0,0,.5);
+        color:#fff;
+        cursor:pointer;
+        z-index:900;
+        }
+    
+    .information {
+        margin:5px 0px;
+        }
+        .information > label:hover{
+        font-weight:bold;
+        }
+    
+
+        input[type=checkbox]{display:none;}
+        
+        /* 질문을 클릭하면 답변 나오게 하기 */
+        input[type=checkbox]:checked + #info{
+            display:block;/* 화면에 보이게 하기 */ 
+        }
+
+
+
+        #info{
+            background-color:#fff;
+            padding:6px;
+            display:none;
+        }
+
+
+        footer{
+            text-align:center;
+            height:100%;
+            width:100%;
+            background-color:#dddddd;
+        }
+
+        .sagecell_interactControlLabel {
+            width:7%!important;
+        }
+
+        .menu, .search{position:absolute;}
+
+        .menu i, .search{font-size:36px;color:#333;}
+
+        #toggle:checked ~ .gnb{left:0%;}
+
+        .popup{
+            display:none;
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0px;
+            background-color:rgba(0,0,0,.3);
+            text-align:center;
+            padding-top:50px;
+            z-index:200;
+        }       
+
+        .gnb{
+            position:fixed; 
+            top:0px;
+            left:-350px;
+            width:350px; 
+            height:100%;
+            box-sizing:border-box;
+            background-color:#fff;
+            transition-duration: 0.3s;
+            z-index:300;
+            }
+
+
+        .gnb label{
+            text-align:right;
+            cursor:pointer;
+            margin:10px;
+            color:#000;
+            font-size:25px;
+            position:absolute;
+            left:300px;
+            top:8px;
+            z-index:400;
+            } 
+
+        .gnb h3{
+            font-size:1.5rem;
+            color:#000;
+            margin:30px 20px;
+            }
+
+        .gnb a:before{content:"- ";}
+        .gnb a{
+            padding-left:20px; display:block;
+            font-size:1rem;color:#000;
+            line-height:36px;
+            text-decoration:none;
+             }
+        .gnb a:hover{
+            color:#000;
+            font-weight:600;
+            background-color:rgba(255, 255, 255, 0.6);
+            }
+}
+
