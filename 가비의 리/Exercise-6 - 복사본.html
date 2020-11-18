@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>    
+    <meta charset="UTF-8">
+    <meta name="Generator" content="Hancom HWP 8.5.8.1677">
+    <meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({languages: ["sage","python"],
+	                       inputLocation: 'div.compute',
+                           evalButtonText: '문제생성',
+                           autoeval:true
+                          });
+        });
+    </script>
+    <title>Random Mathematics Problem</title>
+    <link href="./procyancss.css" rel="stylesheet" type="text/css"/>
+</head>    
+
+<body>
+    <div id="header">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="menu">
+        <i class="fa fa-bars" id="bar"></i></label>
+    <h2><a href="#" title="처음으로">Random Mathematics Problem</a></h2>
+        <div class='popup'></div>
+          <nav class="gnb">
+            <label for="toggle">
+                <i class="fa fa-times"></i></label>
+        <div class="menu">    
+        <h3>CONTENTS</h3>
+             <ul>
+              <li><a href="./Exercise-8.html" title="">Exercise-8</a></li>
+              <li><a href="./Exercise-17.html" title="">Exercise-17</a></li>
+             </ul>
+            </div>
+        </nav>
+        
+    <p id="subject">과목명 - 수학</p> 
+    </div>
+    
+    <div id="cont">
+    <div id="label01"><div class="button">1. 기하</div><div id="unit">도형의 방정식 - 원의 방정식<b>(고등학교)</b></div></div>  
+    
+<div id="toggle01">
+<table>
+<tr>
+	<td class="box">
+        <b>※ 원의 방정식</b>
+	<br><br>
+        [10수학02-06] 원의 방정식을 구할 수 있다.
+	<br><br>
+        [10수학02-07] 좌표평면에서 원과 직선의 위치 관계를 이해한다.
+	</td>
+</tr>
+</table>
+    
+<br>
+      
+      
+    <div class="exbox">
+        
+    원의 중심이 <img src="./Exercise-8/(a,b).jpg" width="35">이고 반지름의 길이가 <img src="./Exercise-8/r.jpg" width="12">인 원의 방정식의 수식은 다음과 같다.
+    
+    <br><br>
+    
+    <img src="./Exercise-8/formula.jpg" width="150">
+        
+    <br><br><br>
+    
+    (Q.8) 주어진 점과 반지름을 이용하여 원의 방정식을 구하여라. 
+    <br><br>
+    <img src="./Exercise-8/PICD6D5.gif" width="45">, <img src="./Exercise-8/PICD6D6.gif" width="32">
+    </div>
+
+<br><br>
+
+[참고자료]
+
+<br>
+<a href="https://mathbang.net/454" target="_blank">https://mathbang.net/454</a>
+<br>
+<br>
+<br>
+<div id="video">강의 동영상 열기</div>
+<br>
+<div id="toggle01-1">
+<iframe src="https://www.youtube.com/embed/9mPF_Ec53Yk"></iframe> 
+</div>
+</div>
+    <div id="label02"><div class="button">문제풀기</div></div>
+    <div class="scroll"></div>
+    <div class="top">▲</div>
+    
+<div id="toggle02" class="compute"><script type="text/x-sage">
+global answer
+global answer_equation
+import random
+
+var('x, y')
+
+def problem_num(): #문제에 들어갈 값 범위 랜덤 함수
+    var('x, a1, b1, c1, d1')
+    
+    a1 = randint(-5, 5) # x
+    b1 = randint(-5, 5) # 중심점 a
+    c1 = randint(-5, 5) # y
+    d1 = randint(-5, 5) # 중심점 b
+    
+    answer_1 = (a1 - b1)^2 + (c1 - d1)^2
+    answer = sqrt(answer_1)
+    
+    answer_equation = (x - b1)^2 + (y - d1)^2 == answer_1  # 방정식
+    
+    #print(answer_equation)
+    
+    c = circle((a1, c1), answer)
+
+    return answer_1, answer, a1, b1, c1, d1, answer_equation # 답과 문제 랜덤 값 반환
+
+def problem_answer_list(): # problem 함수를 다시 실행시키면서 answer값이 0인 경우를 거르는 함수
+                            # 답안과 결합될 숫자(랜덤화 및 중복 값 제거)를 생성하는 함수
+    prob = problem_num()
+    
+    while prob[1] == 0:
+        prob = problem_num()
+    
+    answer_1 = prob[0]
+    answer = prob[1]
+    a1 = prob[2]
+    b1 = prob[3]
+    c1 = prob[4]
+    d1 = prob[5]
+    answer_equation = prob[6]
+    
+    return answer_1, answer, a1, b1, c1, d1, answer_equation
+
+prob = problem_answer_list()
+
+answer_1 = prob[0]
+answer = prob[1]
+a1 = prob[2]
+b1 = prob[3]
+c1 = prob[4]
+d1 = prob[5]
+answer_equation = prob[6]
+answer_equation_2 = answer_equation.lhs() - answer_equation.rhs()  # 이항
+
+show(html("<p>주어진 점 $(%s, %s)$과 반지름 $%s$을 이용하여 원의 방정식을 구하여라.</p>"%(b1, d1, latex(answer))))
+
+@interact
+def _(answers = input_box('x^2 + y^2 == 4', type = str, label = '원의 방정식', width = 20), auto_update = False):
+    
+    p1 = circle((b1, d1), answer)
+    p2 = point([(a1, c1), (b1, d1)], color = 'red', size = 20)
+    p3 = line2d([(a1, c1), (b1, d1)], linestyle = 'dashed')
+    p4 = text('$(%s, %s)$'%(b1, d1), (b1 + 0.2, d1 + 0.2), color = 'black', fontsize = 12)
+    p5 = text('$%s$'%latex(answer), ((3*a1 + b1)/4, (c1 + d1)/2 ), color = 'black', fontsize = 12)
+
+    answers = sage_eval(answers, locals = {'x':x, 'y':y})    
+    answers_2 = answers.lhs() - answers.rhs()  # 이항  
+        
+    if expand(answers_2) == x^2 + y^2 - 4:
+        show(html("<p><span style='color:blue'>Please input your answer in the spaces above.</span></p><p>(위의 빈칸에 답을 입력하고 [Update]버튼을 클릭하세요.)</p>"))
+    
+    else:
+        if (expand(answers_2) == expand(answer_equation_2)) or (expand(answers_2) == -expand(answer_equation_2)) :  # 이항해도 같은지 확인
+            show(html("<p><span style='color:blue'>Correct(정답)</span></p>"))
+            show(html("<p>$%s$"%latex(answer_equation)))
+            show(p1 + p2 + p3 + p4 + p5)
+            
+        else:
+            show(html("<p><span style='color:red'>Incorrect(오답)</span></p>"))
+            show(html("<p>원의 중심이 $(%s,%s)$이고 반지름의 길이가 $%s$인 원의 방정식은 다음과 같이 표기할 수 있다.</p>"%(b1, d1, latex(answer))))
+            show(html("<p>$%s$"%latex(answer_equation)))
+            show(p1 + p2 + p3 + p4 + p5)
+</script></div>
+
+<div class="information">
+       <label class="button" style="display:inline-block; padding:10px 20px; cursor:pointer;" for="info">INDEX</label>
+        <input type="checkbox" id="info">
+        
+ <p id="info">
+ <br><br>
+○ 참여자<br>
+- 이상구 교수 (성균관대, 수학과)<br>
+- 이재화 박사 (성균관대, 에너지환경융합 KIURI 연구단)<br>
+- 이재윤 대표 (㈜프로키언)<br>
+<br><br>
+○ 보유 특허<br>
+- 특허명칭 :&nbsp; 임의 수학 문제를 제공하는 클라우드 컴퓨팅 서버 및 방법 및 기록매체<br>
+- 등록번호 :&nbsp; 10-1560802<br>
+- 등록국가 :&nbsp; 대한민국<br>
+- 등록년도 :&nbsp; 2015<br>
+- 발명자 :&nbsp;&nbsp;&nbsp; 이상구 외 6인<br>
+- 기술이전회사 :&nbsp; ㈜프로키언 (대표: 이재윤)<br>
+<br><br>
+○ 사사<br>
+- 성균관대 기술지주 주식회사, 『2020년 BRIDGE+ 실용화 개발지원 과제』<br>
+- 한국연구재단 혁신성장 선도 고급연구인재 육성사업, (No.2020M3H1A1077095).<br>
+<br><br>
+ </p>
+    </div></div>
+    
+    <footer>
+       <br>
+        <p><b>Copyright @ 2020 <a href="http://matrix.skku.ac.kr" target="blank">SKKU Matrix Lab</a>. All rights reserved.</b><br><b> Made by Manager: Prof. <a href="mailto:sglee@skku.edu">Sang-Gu Lee</a> and Dr. <a href="mailto:jhlee2chn@skku.edu">Jae Hwa Lee</a></b></p>
+ 
+        <p>*This research was supported by Korea Initiative for fostering University of Research and Innovation <br> Program of the National Research Foundation (NRF) funded by the Korean government (MSIT) (No.2020M3H1A1077095).</p> 
+        <br>
+        <p><img src="./signature.jpg" width="210px" hspace="15">   <img src="http://sagemath.org/pix/sage_logo_new_l_hc.png" width="200px"></p>
+
+     </footer>  
+</body>
+     
+  	<script>
+    //설명부분 접는 코드 
+    $(document).ready(function(){
+            $('#label01').click(function(){
+            $('#toggle01').stop().slideToggle();
+        });
+     
+    //문제부분 접는 코드    
+            $('#label02').click(function(){
+            $('#toggle02').stop().slideToggle();
+        });
+     });  
+    
+    //유튜브 동영상 부분 접는 코드    
+    $(document).ready(function(){
+        $('#video').click(function(){
+            $('#toggle01-1').stop().slideToggle();
+                if ($(this).text() == "강의 동영상 열기"){$(this).text("강의 동영상 닫기");} 
+                else {$(this).text("강의 동영상 열기");}; 
+        });
+     });     
+    
+    $(document).ready(function(){
+        $('.popup a').click(function(){
+            $('.popup').fadeIn();
+        });
+    });   
+        
+    //메뉴 슬라이더
+    $(document).ready(function(){            
+        $('.menu').click(function(){
+            $('.popup').fadeIn();
+         });    
+            
+        $('.gnb label').click(function(){
+            $('.popup').fadeOut();
+        });
+      });   
+        
+        
+       
+    //top버튼과 헤더 스크립트    
+    $(document).ready(function(){
+            $('.top').hide();
+       $(window).scroll(function(){
+
+            var scrollPos = $(window).scrollTop(); //윈도우 스크롤 위치값
+            $('.scroll').html(scrollPos);
+            //스크롤 좌표값 400       
+            if(scrollPos>=400){
+                $('.top').fadeIn();
+            }else{
+                $('.top').fadeOut();
+            }
+        });
+        
+        $(window).scroll(function(){
+            var scrollPos = $(window).scrollTop();
+            $('.scroll').html(scrollPos);      
+            if(scrollPos>=150){
+                $('#header').fadeOut();
+            }else{
+                $('#header').fadeIn();
+            }
+        });
+        
+     //top버튼을 클릭하면 html, body 태그를 찾아서 위로 올라가기
+        $('.top').click(function(){
+            $('html, body').animate({scrollTop:'0'},500);
+        });
+    });    
+        
+        
+
+    </script>
+</html>

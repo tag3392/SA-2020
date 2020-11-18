@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>    
+    <meta NAME="Generator" content="Hancom HWP 8.5.8.1677">    
+    <meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">    
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>    
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({languages: ["sage","python"],
+	                       inputLocation: 'div.compute',
+                           evalButtonText: '문제생성',
+                           autoeval:true
+                          });
+    });
+    </script>
+    <title>Random Mathematics Problem</title>
+    <link href="./procyancss.css" rel="stylesheet" type="text/css"/>
+</head>    
+    
+<body>
+    <div id="header">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="menu">
+        <i class="fa fa-bars" id="bar"></i></label>
+    <h2><a href="#" title="처음으로">VISUAL MATH CODING APPLICATION</a></h2>
+        <div class='popup'></div>
+          <nav class="gnb">
+            <label for="toggle">
+                <i class="fa fa-times"></i></label>
+         <div class="menu">    
+        <h3>CONTENTS</h3>
+             <ul>
+              <li><a href="./Exercise-1.html" title="">생활속의 통계1(비밀번호)</a></li>
+              <li><a href="./Exercise-2.html" title="">생활속의 통계2(감염자)</a></li>
+           <li><a href="./Exercise-3.html" title="">시어핀스키 삼각형과 확률3</a></li>
+           <li><a href="./Exercise-4.html" title="">수의 체계</a></li>
+           <li><a href="./Exercise-5.html" title="">항등원 역원</a></li>
+           <li><a href="./Exercise-6.html" title="">가비의 리</a></li>
+           <li><a href="./Exercise-7.html" title="">코딩으로 그림그리기</a></li>
+           <li><a href="./Exercise-8.html" title="">맨홀 뚜껑은 왜 둥글까?</a></li>
+           <li><a href="./Exercise-9.html" title="">산술기하평균</a></li>
+           <li><a href="./Exercise-10.html" title="">한붓그리기</a></li>
+              <li><a href="./Exercise-11.html" title="">최소 신장 트리</a></li>
+           <li><a href="./Exercise-12.html" title="">네트워크 이론</a></li>
+             </ul>
+            </div>
+        </nav>
+    
+    <p id="subject">과목명 - 수학Ⅱ</p>
+    </div> 
+    
+    <div id="cont">
+    <div id="label01"><div class="button">2. 해석</div><div id="unit">적분 – 정적분<b>(고등학교)</b></div></div>
+
+<div id="toggle01">
+<table>
+<tr>
+	<td class="box">
+        <b>※ 정적분</b>
+	<br><br>
+        [12수학Ⅱ03-03] 정적분의 뜻을 안다.
+	<br><br>
+        [12수학Ⅱ03-04] 다항함수의 정적분을 구할 수 있다.
+    <br><br><br>
+        <b>※ 정적분의 활용</b>
+	<br><br>
+        [12수학Ⅱ03-05] 곡선으로 둘러싸인 도형의 넓이를 구할 수 있다.
+	</td>
+</tr>
+</table>    
+    
+<br>    
+    
+    <div class="exbox">      
+    
+    구간 <img src="./Exercise-17/[a,b].jpg" alt="" width="37px">에서 곡선<img src="./Exercise-17/y=f(x).jpg"width="75px">와 <img src="./Exercise-17/x.jpg" width="12px">축 사이의 넓이는 다음과 같다.
+      
+    <br><br><br>
+    
+    <img src="./Exercise-17/formula.jpg" width="140">
+        
+    <br><br><br>
+   
+    (Q.17) 구간 <img src="./Exercise-17/PICF3F7.gif" alt="" width="44" height="15" vspace="1" hspace="0" border="0">에서 <img src="./Exercise-17/PICF3F8.gif" alt="" width="60" height="18" vspace="1" hspace="0" border="0">과 <img src="./Exercise-17/PICF409.gif" alt="" width="9" height="15" vspace="1" hspace="0" border="0">축이 이루는 영역의 면적을 구하여라.
+    </div> 
+
+<br><br>
+
+[참고자료]
+
+<br>
+<a href="https://www.mathfactory.net/11265" target="_blank">https://www.mathfactory.net/11265</a>
+<br>
+<br>
+<br>
+<div id="video">강의 동영상 열기</div>
+<br>
+<div id="toggle01-1">
+<iframe src="https://www.youtube.com/embed/Ove0rJKR8uc"></iframe> 
+</div> 
+</div>    
+    <div id="label02"><div class="button">문제풀기</div></div>
+    <div class="scroll"></div>
+    <div class="top">▲</div>
+              
+<div id="toggle02" class="compute"><script type="text/x-sage">
+a=int(input())
+b=int (input())
+c=int(input ())
+d=int(input())
+e=int (input ())
+f=int(input ())
+print(f'b/a의 값 : {b/a}.')
+print(f'd/c의 값 : {d/c}.')
+print(f'f/e의 값 : {f/e}.')
+print(f'b+c+f/a+c+e의 값 : {f/e}.')
+
+
+</script></div>
+
+<div class="information">
+       <label class="button" style="display:inline-block; padding:10px 20px; cursor:pointer;" for="info">INDEX</label>
+        <input type="checkbox" id="info">
+        
+ <p id="info"> 
+ <br><br>     
+○ 참여자<br>
+- 김지환 팀장 (인천과학예술영재학교)<br>
+- 조형준 (인천과학예술영재학교)<br>
+- 신재우 (인천과학예술영재학교)<br>
+- 김경택 (인천과학예술영재학교) <br>
+- 지도교사: 최정심 선생님 (인천과학예술영재학교)<br>
+- 이재윤 대표 (㈜프로키언)<br>
+<br><br>
+○ 보유 특허<br>
+- 특허명칭 :&nbsp; 임의 수학 문제를 제공하는 클라우드 컴퓨팅 서버 및 방법 및 기록매체<br>
+- 등록번호 :&nbsp; 10-1560802<br>
+- 등록국가 :&nbsp; 대한민국<br>
+- 등록년도 :&nbsp; 2015<br>
+- 발명자 :&nbsp;&nbsp;&nbsp; 이상구 외 6인<br>
+- 기술이전회사 :&nbsp; ㈜프로키언 (대표: 이재윤)<br>
+<br><br>
+○ 사사<br>
+- 성균관대 기술지주 주식회사, 『2020년 BRIDGE+ 실용화 개발지원 과제』<br>
+- 한국연구재단 혁신성장 선도 고급연구인재 육성사업, (No.2020M3H1A1077095).<br>
+<br><br>
+ </p>
+    </div></div>
+    
+    <footer>
+       <br>
+        <p><b>Copyright @ 2020 <a href="http://matrix.skku.ac.kr" target="blank">SKKU Matrix Lab</a>. All rights reserved.</b><br><b> Made by Manager: Prof. <a href="mailto:sglee@skku.edu">Sang-Gu Lee</a> and Dr. <a href="mailto:jhlee2chn@skku.edu">Jae Hwa Lee</a></b></p>
+ 
+        <p>*This research was supported by Korea Initiative for fostering University of Research and Innovation <br> Program of the National Research Foundation (NRF) funded by the Korean government (MSIT) (No.2020M3H1A1077095).</p> 
+        <br>
+        <p><img src="./signature.jpg" width="210px" hspace="15">   <img src="http://sagemath.org/pix/sage_logo_new_l_hc.png" width="200px"></p>
+
+     </footer>   
+</body>
+     
+  	<script>
+    //설명부분 접는 코드 
+    $(document).ready(function(){
+            $('#label01').click(function(){
+            $('#toggle01').stop().slideToggle();
+        });
+     
+    //문제부분 접는 코드    
+            $('#label02').click(function(){
+            $('#toggle02').stop().slideToggle();
+        });
+     }); 
+    
+    //유튜브 동영상 부분 접는 코드    
+    $(document).ready(function(){
+        $('#video').click(function(){
+            $('#toggle01-1').stop().slideToggle();
+                if ($(this).text() == "강의 동영상 열기"){$(this).text("강의 동영상 닫기");} 
+                else {$(this).text("강의 동영상 열기");}; 
+        });
+     });     
+    
+    $(document).ready(function(){
+        $('.popup a').click(function(){
+            $('.popup').fadeIn();
+        });
+    });   
+        
+    //메뉴 슬라이더
+    $(document).ready(function(){            
+        $('.menu').click(function(){
+            $('.popup').fadeIn();
+         });    
+            
+        $('.gnb label').click(function(){
+            $('.popup').fadeOut();
+        });
+      });   
+        
+   
+        
+    //top버튼과 헤더 스크립트    
+    $(document).ready(function(){
+            $('.top').hide();
+       $(window).scroll(function(){
+
+            var scrollPos = $(window).scrollTop(); //윈도우 스크롤 위치값
+            $('.scroll').html(scrollPos);
+            //스크롤 좌표값 400       
+            if(scrollPos>=400){
+                $('.top').fadeIn();
+            }else{
+                $('.top').fadeOut();
+            }
+        });
+        
+        $(window).scroll(function(){
+            var scrollPos = $(window).scrollTop();
+            $('.scroll').html(scrollPos);      
+            if(scrollPos>=150){
+                $('#header').fadeOut();
+            }else{
+                $('#header').fadeIn();
+            }
+        });
+        
+        //top버튼을 클릭하면 html, body 태그를 찾아서 위로 올라가기
+        $('.top').click(function(){
+            $('html, body').animate({scrollTop:'0'},500);
+        });
+    });    
+        
+        
+        
+    </script>
+</html>
