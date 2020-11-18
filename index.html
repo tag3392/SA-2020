@@ -16,14 +16,14 @@
                            template:       sagecell.templates.minimal,
                            evalButtonText: 'Activate'});
     // Make *any* div with class 'compute' a Sage cell
-    sagecell.makeSagecell({languages: ["sage","python"],
+    sagecell.makeSagecell({languages: ["python","sage"],
 	                       inputLocation: 'div.compute',
                            evalButtonText: '문제생성',
                            autoeval:true
                           });
         });
     </script>
-    <title>Random Mathematics Problem</title>
+    <title>Visual Math coding application</title>
     <link href="./procyancss.css" rel="stylesheet" type="text/css"/>
 </head>    
 
@@ -38,15 +38,16 @@
             <label for="toggle">
                 <i class="fa fa-times"></i></label>
         <div class="menu">    
-        <h3>CONTENTS</h3>
+        <h3>CONTENTs</h3>
              <ul>
-              <li><a href="./Exercise-8.html" title="">Exercise-8</a></li>
-              <li><a href="./Exercise-17.html" title="">Exercise-17</a></li>
+              <li><a href="./Exercise-4.html" title="">가비의리</a></li>
+              <li><a href="./Exercise-5.html" title="">항등원 역원</a></li>
+			  <li><a href="./Exercise-6.html" title="">수의 체계</a></li>
              </ul>
             </div>
         </nav>
         
-    <p id="subject">과목명 - 수학</p> 
+    <p id="subject">대수 파트</p> 
     </div>
     
     <div id="cont">
@@ -103,87 +104,16 @@
     <div class="top">▲</div>
     
 <div id="toggle02" class="compute"><script type="text/x-sage">
-global answer
-global answer_equation
-import random
-
-var('x, y')
-
-def problem_num(): #문제에 들어갈 값 범위 랜덤 함수
-    var('x, a1, b1, c1, d1')
-    
-    a1 = randint(-5, 5) # x
-    b1 = randint(-5, 5) # 중심점 a
-    c1 = randint(-5, 5) # y
-    d1 = randint(-5, 5) # 중심점 b
-    
-    answer_1 = (a1 - b1)^2 + (c1 - d1)^2
-    answer = sqrt(answer_1)
-    
-    answer_equation = (x - b1)^2 + (y - d1)^2 == answer_1  # 방정식
-    
-    #print(answer_equation)
-    
-    c = circle((a1, c1), answer)
-
-    return answer_1, answer, a1, b1, c1, d1, answer_equation # 답과 문제 랜덤 값 반환
-
-def problem_answer_list(): # problem 함수를 다시 실행시키면서 answer값이 0인 경우를 거르는 함수
-                            # 답안과 결합될 숫자(랜덤화 및 중복 값 제거)를 생성하는 함수
-    prob = problem_num()
-    
-    while prob[1] == 0:
-        prob = problem_num()
-    
-    answer_1 = prob[0]
-    answer = prob[1]
-    a1 = prob[2]
-    b1 = prob[3]
-    c1 = prob[4]
-    d1 = prob[5]
-    answer_equation = prob[6]
-    
-    return answer_1, answer, a1, b1, c1, d1, answer_equation
-
-prob = problem_answer_list()
-
-answer_1 = prob[0]
-answer = prob[1]
-a1 = prob[2]
-b1 = prob[3]
-c1 = prob[4]
-d1 = prob[5]
-answer_equation = prob[6]
-answer_equation_2 = answer_equation.lhs() - answer_equation.rhs()  # 이항
-
-show(html("<p>주어진 점 $(%s, %s)$과 반지름 $%s$을 이용하여 원의 방정식을 구하여라.</p>"%(b1, d1, latex(answer))))
-
-@interact
-def _(answers = input_box('x^2 + y^2 == 4', type = str, label = '원의 방정식', width = 20), auto_update = False):
-    
-    p1 = circle((b1, d1), answer)
-    p2 = point([(a1, c1), (b1, d1)], color = 'red', size = 20)
-    p3 = line2d([(a1, c1), (b1, d1)], linestyle = 'dashed')
-    p4 = text('$(%s, %s)$'%(b1, d1), (b1 + 0.2, d1 + 0.2), color = 'black', fontsize = 12)
-    p5 = text('$%s$'%latex(answer), ((3*a1 + b1)/4, (c1 + d1)/2 ), color = 'black', fontsize = 12)
-
-    answers = sage_eval(answers, locals = {'x':x, 'y':y})    
-    answers_2 = answers.lhs() - answers.rhs()  # 이항  
-        
-    if expand(answers_2) == x^2 + y^2 - 4:
-        show(html("<p><span style='color:blue'>Please input your answer in the spaces above.</span></p><p>(위의 빈칸에 답을 입력하고 [Update]버튼을 클릭하세요.)</p>"))
-    
-    else:
-        if (expand(answers_2) == expand(answer_equation_2)) or (expand(answers_2) == -expand(answer_equation_2)) :  # 이항해도 같은지 확인
-            show(html("<p><span style='color:blue'>Correct(정답)</span></p>"))
-            show(html("<p>$%s$"%latex(answer_equation)))
-            show(p1 + p2 + p3 + p4 + p5)
-            
-        else:
-            show(html("<p><span style='color:red'>Incorrect(오답)</span></p>"))
-            show(html("<p>원의 중심이 $(%s,%s)$이고 반지름의 길이가 $%s$인 원의 방정식은 다음과 같이 표기할 수 있다.</p>"%(b1, d1, latex(answer))))
-            show(html("<p>$%s$"%latex(answer_equation)))
-            show(p1 + p2 + p3 + p4 + p5)
+a=int(input())
+b=int (input())
+c=int(input ())
+d=int(input())
+e=int (input ())
+f=int(input ())
+print(f'b/a의 값 : {b/a}.')
+print(f'd/c의 값 : {d/c}.')
+print(f'f/e의 값 : {f/e}.')
+print(f'b+c+f/a+c+e의 값 : {f/e}.')
 </script></div>
 
 <div class="information">
@@ -193,9 +123,12 @@ def _(answers = input_box('x^2 + y^2 == 4', type = str, label = '원의 방정�
  <p id="info">
  <br><br>
 ○ 참여자<br>
-- 이상구 교수 (성균관대, 수학과)<br>
-- 이재화 박사 (성균관대, 에너지환경융합 KIURI 연구단)<br>
-- 이재윤 대표 (㈜프로키언)<br>
+-  김지환 팀장(인천과학예술영재학교)<br>
+- 조형준  (인천과학예술영재학교)<br>
+- 신재우 (인천과학예술영재학교)<br>
+-김경택 (인천과학예술영재학교)<br>
+-지도교사: 최정심 선생님 (인천과학예술영재학교) <br>
+- 자문위원: 이재윤 대표 (㈜프로키언)<br>
 <br><br>
 ○ 보유 특허<br>
 - 특허명칭 :&nbsp; 임의 수학 문제를 제공하는 클라우드 컴퓨팅 서버 및 방법 및 기록매체<br>
